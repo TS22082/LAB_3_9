@@ -23,14 +23,15 @@ int main()
     string year;
     
     int numDay;
+    int numMon;
     int numYear;
     
     int *dptr = nullptr;
-    string *mptr = nullptr;
+    int *mptr = nullptr;
     int *yptr = nullptr;
     
     dptr = &numDay;
-    mptr = &month;
+    mptr = &numMon;
     yptr = &numYear;
     
     transform(aDate.begin(), aDate.end(), aDate.begin(), ::toupper);
@@ -48,6 +49,35 @@ int main()
         
     }
     
+    if (month == "JAN"){
+        numMon = 1;
+    } else if (month == "FEB"){
+        numMon = 2;
+    } else if (month == "MAR"){
+        numMon = 3;
+    } else if (month == "APR"){
+        numMon = 4;
+    } else if (month == "MAY"){
+        numMon = 5;
+    }else if (month == "JUN"){
+        numMon = 6;
+    } else if (month == "JUL"){
+        numMon = 7;
+    } else if (month == "AUG"){
+        numMon = 8;
+    }else if (month == "SEP"){
+        numMon = 9;
+    } else if (month == "OCT"){
+        numMon = 10;
+    } else if (month == "NOV"){
+        numMon = 11;
+    } else if (month == "DEC"){
+        numMon = 12;
+    } else {
+    
+        cout << "error inproper input" << endl;
+    }
+
     for (int k = 7; k < 11; k++){
     
         year += aDate[k];
